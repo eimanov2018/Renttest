@@ -1,0 +1,85 @@
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2017-11-16 14:02:19
+project --topLevelPackage enterprise --projectName "RentIT3" --java 8 --packaging JAR
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2017-11-16 14:02:19
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2017-11-16 14:02:22
+jpa setup --database POSTGRES --provider ECLIPSELINK --databaseName db6 --hostName localhost --userName postgres --password admin
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2017-11-16 14:13:31
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2017-11-16 14:17:40
+osgi start --url file:///Users/emil/Desktop/ES/practices/org.eclipse.persistence.jpa-2.5.0-RC1.jar
+
+osgi start --url file:///Users/emil/Desktop/ES/practices/jboss-logging-3.1.0.ga.jar
+osgi start --url file:///Users/emil/Desktop/ES/practices/jboss-logging-3.1.0.cr2-sources.jar
+osgi start --url file:///Users/emil/Desktop/ES/practices/jboss-logging-3.1.0.CR2.jar
+entity jpa --class ~.domain.Plant
+field string --fieldName name
+
+field string --fieldName description
+
+field number --fieldName price --type java.lang.Double
+
+enum type --class ~.domain.POStatus
+enum constant --name CREATED
+
+enum constant --name APPROVED
+
+enum constant --name REJECTED
+
+entity jpa --class ~.domain.PurchaseOrder
+field date --fieldName startDate --type java.util.Date
+
+field date --fieldName endDate --type java.util.Date
+
+field number --fieldName total --type java.lang.Double
+
+field enum --type ~.domain.POStatus --fieldName status
+
+field reference --fieldName plant --type ~.domain.Plant --cardinality MANY_TO_ONE 
+
+web mvc setup
+web mvc all --package ~.web
+class --class ~.rest.PlantResource
+  field string --fieldName name
+
+  field string --fieldName description
+
+  field number --fieldName price --type java.lang.Double
+
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2017-11-16 16:26:49
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2017-11-21 01:00:02
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2017-11-21 01:05:37
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2017-11-21 13:00:38
+  class --class ~.rest.PlantResourceList
+
+class --class ~.rest.PlantResourceAssembler
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2017-11-21 13:32:08
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2017-11-21 13:33:05
+class --class ~.rest.web.PlantRESTController
+
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2017-11-21 13:37:13
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2017-11-21 13:37:54
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2017-11-21 13:40:01
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2017-11-21 13:40:25
+osgi start --url file:///Users/emil/Desktop/ES/practices/jersey-client-1.17.jar
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2017-11-21 14:32:12
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2017-11-23 02:28:43
+enum type --class ~.domain.POStatus
+
+enum constant --name PENDING_CONFIRMATION
+enum constant --name APPROVED
+enum constant --name REJECTED
+enum constant --name PENDING_UPDATE
+enum constant --name OPN
+enum constant --name CLOSED
+class --class ~.util.DateAdapter
+class --class ~.util.ExtendedLink
+class --class ~.util.ResourceSupport
+class --class ~.rest.PurchaseOrderResource
+class --class ~.rest.PurchaseOrderResourceAssembler
+class --class ~.rest.web.PurchaseOrderRESTController
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2017-11-23 02:48:06
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2017-11-23 02:50:05
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2017-11-23 03:01:21
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2017-12-13 16:21:41
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2017-12-14 13:01:40
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2017-12-14 13:38:10
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2017-12-14 13:38:13

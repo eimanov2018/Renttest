@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_enterprise_domain_PurchaseOrder" items="${purchaseorders}" z="ho4MGwAcWGt7AwDqfbTBWoqizqU=">
+        <table:table data="${purchaseorders}" id="l_enterprise_domain_PurchaseOrder" path="/purchaseorders" z="lOQT9KXLJWQLCBDexcQ9aKXRS1c=">
+            <table:column date="true" dateTimePattern="${purchaseOrder_startdate_date_format}" id="c_enterprise_domain_PurchaseOrder_startDate" property="startDate" z="0dJI+V/iguaNtrCsdDB8lQq5WQM="/>
+            <table:column date="true" dateTimePattern="${purchaseOrder_enddate_date_format}" id="c_enterprise_domain_PurchaseOrder_endDate" property="endDate" z="tT4dsKrgOG+CNiOK9G+4YTBSmdA="/>
+            <table:column id="c_enterprise_domain_PurchaseOrder_total" property="total" z="msRTKqjigKwAhYfaCnnaU4QCP5g="/>
+            <table:column id="c_enterprise_domain_PurchaseOrder_status" property="status" z="T02N8biPOe9NOTcLp3CnJ+CIjFU="/>
+            <table:column id="c_enterprise_domain_PurchaseOrder_plant" property="plant" z="gTvWmFR7P1ZAl5HKu9KeAQXbiOc="/>
+        </table:table>
+    </page:list>
+</div>

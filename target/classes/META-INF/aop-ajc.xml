@@ -1,0 +1,18 @@
+<aspectj>
+<aspects>
+<aspect name="enterprise.domain.Plant_Roo_Configurable"/>
+<aspect name="enterprise.domain.Plant_Roo_Jpa_Entity"/>
+<aspect name="enterprise.web.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
+<aspect name="enterprise.domain.PurchaseOrder_Roo_Jpa_Entity"/>
+<aspect name="enterprise.domain.PurchaseOrder_Roo_Jpa_ActiveRecord"/>
+<aspect name="enterprise.domain.Plant_Roo_JavaBean"/>
+<aspect name="enterprise.domain.Plant_Roo_ToString"/>
+<aspect name="enterprise.web.PlantController_Roo_Controller"/>
+<aspect name="enterprise.domain.PurchaseOrder_Roo_ToString"/>
+<aspect name="enterprise.domain.PurchaseOrder_Roo_Configurable"/>
+<aspect name="enterprise.web.PurchaseOrderController_Roo_Controller"/>
+<aspect name="enterprise.domain.Plant_Roo_Jpa_ActiveRecord"/>
+<aspect name="enterprise.domain.PurchaseOrder_Roo_JavaBean"/>
+</aspects>
+</aspectj>
+
